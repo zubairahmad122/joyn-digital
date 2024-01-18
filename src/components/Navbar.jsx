@@ -8,9 +8,15 @@ import { AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
   const [navOpen,setOpen] = useState(false);
 
+  const blur = {
+    WebkitBackdropFilter: 'blur(8px)',
+    backdropFilter: 'blur(8px)'
+  }
+
 
   return (
-    <nav style={{ backdropFilter: "blur(20px)" }} className='min-h-[80px] px-[40px] py-[10px] backdrop-blur-[20px] z-50 opacity-[0.8] left-0 fixed w-full top-0 mx-auto flex items-center justify-between'>
+   
+    <nav style={blur} className=' px-[1rem] fixed top-0 left-0 xxxl:static w-full bg-[#F2EEEE] opacity-[0.9]  z-[100] sm:px-[2rem] max mx-auto h-auto py-[1rem]  backdrop-blur-lg shadow-md mb-2 flex justify-between items-center'>
       <Link href={'/'} >
         <Image
           src="/assets/logo.png"

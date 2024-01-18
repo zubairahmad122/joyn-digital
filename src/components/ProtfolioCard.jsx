@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Link from 'next/link';
-const ProtfolioCard = ({ logo, spanTitle, title, desc, image }) => {
+const ProtfolioCard = ({ logo, spanTitle, title, desc, image,id }) => {
 
     const blueGradient = {
         background: 'linear-gradient(63deg, #163160 0%, #2957A7 98.38%)'
@@ -18,7 +18,7 @@ const ProtfolioCard = ({ logo, spanTitle, title, desc, image }) => {
 
                 <p className='text-[#656B70] text-[10px] xsm:w-full ssm:text-[12px] xsm:text-[14px] lg:text-[16px] font-Noto w-[90%]'>{desc}</p>
 
-                <Link className="text-[#2957A7]  text-[14px] xsm:text-[16px] font-semibold flex items-center gap-[4px]" href={'/'} > View case <Image src={'/assets/Arrow.svg'} width={100} height={100} alt='arrow' className=' w-[14px] xsm:w-[18px]' /> </Link>
+                <Link className="text-[#2957A7]  text-[14px] xsm:text-[16px] font-semibold flex items-center gap-[4px]" href={`/${id}`} > View case <Image src={'/assets/Arrow.svg'} width={100} height={100} alt='arrow' className=' w-[14px] xsm:w-[18px]' /> </Link>
 
                 
             </div>

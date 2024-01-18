@@ -73,6 +73,7 @@ const page = () => {
             <Image src='/assets/teamwork5.png' alt="team work img" width={1000} height={1000} className=' w-full sm:w-[35%] h-full object-top object-cover rounded-[0px] sm:rounded-[30px]' />
             </div>
           </div>
+          
       </section>
 
   </div>
