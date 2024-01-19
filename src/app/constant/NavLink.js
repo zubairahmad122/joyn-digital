@@ -35,7 +35,7 @@ export const protData = [
         logo:luckycementlogo,
         spanTitle:"Sales & Distribution",
         title:" network management end to end",
-        desc:"Digitised Lucky Cements’ processes including Sales Universe Management, CRM, AI Based market intelligence, Field Force Management, and finally AI / ML Based analytics.",
+        desc:"End-to-End solution design and implementation to digitize Lucky Cements' Secondary Sales processes, Field Force Management, Sales Universe Management, CRM, AI Based Market Intelligence, Field Force Management, and finally AI / ML Based analytics.",
         image:proj2,
     }
 ]

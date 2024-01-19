@@ -5,18 +5,22 @@ import { navLinks } from '@/app/constant/NavLink'
 import { CiMenuFries } from 'react-icons/ci'
 import { useState } from 'react'
 import { AiOutlineClose } from "react-icons/ai";
+import './com.css'
 const Navbar = () => {
   const [navOpen,setOpen] = useState(false);
+  const [active,setActive] = useState("Home");
 
-  const blur = {
-    WebkitBackdropFilter: 'blur(8px)',
-    backdropFilter: 'blur(8px)'
+
+  const LinkClick =  (i) =>{
+      setActive(i);
+      setOpen(false);
   }
+
 
 
   return (
    
-    <nav style={blur} className=' px-[1rem] fixed top-0 left-0 xxxl:static w-full bg-[#F2EEEE] opacity-[0.9]  z-[100] sm:px-[2rem] max mx-auto h-auto py-[1rem]  backdrop-blur-lg shadow-md mb-2 flex justify-between items-center'>
+    <nav className=' px-[1rem] fixed top-0 left-0 xxxl:static w-full bg-[#F2EEEE] opacity-[0.9]  z-[100] sm:px-[2rem] max mx-auto h-auto py-[1rem]  backdrop-blur-lg shadow-md mb-2 flex justify-between items-center'>
       <Link href={'/'} >
         <Image
           src="/assets/logo.png"
@@ -41,7 +45,7 @@ const Navbar = () => {
     </div>
         {
           navLinks.map((i) => {
-            return <Link onClick={() => setOpen(false)}   className='font-Noto text-[18px] lg:text-[20px] text-[#202020] xl:text-[22px] font-[400]' href={i.id} key={i.id} >{i.title}</Link>
+            return <Link onClick={() => LinkClick(i)}   className={`font-Noto text-[18px] lg:text-[20px] text-[#202020] link xl:text-[22px] font-[400] ${active === i ? 'active' : ''}`} href={i.id} key={i.id} >{i.title}</Link>
 
           })
         }
