@@ -12,20 +12,18 @@ import { Carousel } from 'react-responsive-carousel';
 import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
 import { motion } from 'framer-motion'
 
-const page = ({ params }) => {
-  const id = params.projectDetail;
-  const [projectContent, setProjectContent] = useState({})
-  const [loader, setLoader] = useState(true)
-
-  const tranitiom = { duration: 2, type: 'spring' };
-
+const Page = ({ params }) => {
+  const id = params.slug;
+  const [projectContent, setProjectContent] = useState({});
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     const data = projectData.find((project) => project.id === parseInt(id));
-    setProjectContent(data)
+    setProjectContent(data);
     setLoader(false);
-  }, [])
+  }, [id]);
 
+  const tranitiom = { duration: 2, type: 'spring' };
   const { name, heading, heroP, sec2img1, sec2img2, sec3p1, sec3p2, sec3p3, sec4img, logo, headinbr1, headinbr2, heroPbr1, heroPbr2, sec4headingB, sec4headingM, sec4headingM1, npid, bglg } = projectContent;
 
 
@@ -159,4 +157,4 @@ const page = ({ params }) => {
   )
 }
 
-export default page
+export default Page
