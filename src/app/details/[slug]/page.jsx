@@ -6,18 +6,16 @@ import { FaPython, FaAws } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiGoogleanalytics, SiReact } from "react-icons/si";
 import { useEffect, useState } from 'react';
-import Loading from '../loading';
+import Loading from '@/app/loading';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
 import { motion } from 'framer-motion'
 
 const page = ({ params }) => {
-  const id = params.projectDetail;
+  const id = params.slug;
   const [projectContent, setProjectContent] = useState({})
-  const [loader, setLoader] = useState(true)
-
-  const tranitiom = { duration: 2, type: 'spring' };
+  const [loader, setLoader] = useState(true);
 
 
   useEffect(() => {
